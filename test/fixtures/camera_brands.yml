@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  is_ptz_available: false
+  is_sound_available: false
+  is_infrared_available: false
+  is_flash_available: false
+  max_resolution_width: 1
+  max_resolution_height: 1
+  camera_type: one
+
+two:
+  brand: MyString
+  model: MyString
+  is_ptz_available: false
+  is_sound_available: false
+  is_infrared_available: false
+  is_flash_available: false
+  max_resolution_width: 1
+  max_resolution_height: 1
+  camera_type: two

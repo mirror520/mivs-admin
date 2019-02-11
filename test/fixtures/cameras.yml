@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  camera: MyString
+  address: MyString
+  output_width: 1
+  output_height: 1
+  x: 1
+  'y': 1
+  is_record_enabled: false
+  is_enabled: false
+  camera_brand: one
+  camera_video_format: one
+  location_area: one
+
+two:
+  camera: MyString
+  address: MyString
+  output_width: 1
+  output_height: 1
+  x: 1
+  'y': 1
+  is_record_enabled: false
+  is_enabled: false
+  camera_brand: two
+  camera_video_format: two
+  location_area: two

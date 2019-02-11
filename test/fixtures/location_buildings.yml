@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  building: MyString
+  local_x: 1
+  local_y: 1
+  location: one
+
+two:
+  building: MyString
+  local_x: 1
+  local_y: 1
+  location: two

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  layout: MyString
+  floor: 1
+  location_building: one
+
+two:
+  layout: MyString
+  floor: 1
+  location_building: two
