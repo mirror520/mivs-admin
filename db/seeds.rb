@@ -107,7 +107,10 @@ camera = Camera.create(
     camera_video_format: CameraVideoFormat.where(camera_brand: c920, video_format: H264_OVER_DEV).first, 
     location_area: mis_5f_outside)
 
-# camera.camera_brand
-# camera.camera_brand.formats
-# camera.location_area
-# camera.video_format
+# Server seed
+dvr1 = Dvr.create(account: 'admin', password: '123456', channel_num: 8)
+          .create_server(name: 'MIS DVR-1', address: '192.168.0.100', port: 80, location_area: mis_5f_outside)
+dvr2 = Dvr.create(account: 'admin', password: '123456', channel_num: 8)
+          .create_server(name: 'MIS DVR-2', address: '192.168.0.110', port: 80, location_area: mis_5f_outside)
+
+dvr1.cameras = [camera]

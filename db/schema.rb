@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_09_175605) do
+ActiveRecord::Schema.define(version: 2019_02_17_115802) do
 
   create_table "camera_brands", force: :cascade do |t|
     t.string "brand"
@@ -61,8 +61,23 @@ ActiveRecord::Schema.define(version: 2019_02_09_175605) do
     t.index ["location_area_id"], name: "index_cameras_on_location_area_id"
   end
 
+  create_table "cameras_servers", primary_key: ["camera_id", "server_id"], force: :cascade do |t|
+    t.integer "camera_id"
+    t.integer "server_id"
+    t.index ["camera_id"], name: "index_cameras_servers_on_camera_id"
+    t.index ["server_id"], name: "index_cameras_servers_on_server_id"
+  end
+
   create_table "codecs", force: :cascade do |t|
     t.string "codec"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dvrs", force: :cascade do |t|
+    t.string "account"
+    t.string "password"
+    t.integer "channel_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -109,6 +124,19 @@ ActiveRecord::Schema.define(version: 2019_02_09_175605) do
     t.string "protocol"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "servers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.integer "port"
+    t.integer "location_area_id"
+    t.string "serviceable_type"
+    t.integer "serviceable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_area_id"], name: "index_servers_on_location_area_id"
+    t.index ["serviceable_type", "serviceable_id"], name: "index_servers_on_serviceable_type_and_serviceable_id"
   end
 
   create_table "video_formats", force: :cascade do |t|
