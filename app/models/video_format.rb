@@ -7,6 +7,10 @@ class VideoFormat < ApplicationRecord
     has_many :camera_video_formats
     has_many :camera_brands, through: :camera_video_formats
 
+    def name
+        self.format
+    end
+
     private
     def add_format_name
         self.format = codec.codec

@@ -5,4 +5,8 @@ class LocationBuildingFloor < ApplicationRecord
 
     alias_attribute :areas, :location_areas
     alias_attribute :building, :location_building
+
+    def name
+        "#{building.name} #{self.floor} 樓"
+    end
 end

@@ -8,4 +8,8 @@ class CameraBrand < ApplicationRecord
     
     alias_attribute :type, :camera_type
     alias_attribute :formats, :video_formats
+
+    def name
+        self.brand
+    end
 end

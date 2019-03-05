@@ -9,4 +9,8 @@ class Camera < ApplicationRecord
 
     alias_attribute :format, :video_format
     alias_attribute :area, :location_area
+
+    def name
+        self.camera
+    end
 end

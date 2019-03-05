@@ -4,4 +4,8 @@ class LocationArea < ApplicationRecord
     has_many :cameras
 
     alias_attribute :building_floor, :location_building_floor
+
+    def name
+        self.area
+    end
 end
