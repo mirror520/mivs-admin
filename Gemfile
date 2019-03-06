@@ -27,6 +27,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Redis Admin for managing data
 gem 'rails_admin', '~> 1.3'
+# Use Devise for authentication
+gem 'devise'
+# Use CanCanCan for authorization
+gem 'cancancan', '~> 2.0'
+# Use Rolify for role management
+gem 'rolify'
+# Use Paper Trail for tracking histroy
+gem 'paper_trail'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
