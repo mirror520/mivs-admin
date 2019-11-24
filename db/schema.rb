@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_115932) do
   end
 
   create_table "cameras", force: :cascade do |t|
-    t.string "camera"
+    t.string "name"
     t.string "address"
     t.integer "output_width"
     t.integer "output_height"

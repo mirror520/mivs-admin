@@ -99,8 +99,16 @@ mis_503_room = LocationArea.create(
     location_building_floor: mis_5f)
 
 # Camera seed
-camera = Camera.create(
-    camera: 'Logitech C920', address: "/dev/video0", 
+camera1 = Camera.create(
+    name: 'Logitech C920', address: "/dev/video0", 
+    output_width: 1920, output_height: 1080, 
+    x: 0, y: 0, is_record_enabled: true, is_enabled: true, 
+    camera_brand: c920, 
+    camera_video_format: CameraVideoFormat.where(camera_brand: c920, video_format: H264_OVER_DEV).first, 
+    location_area: mis_5f_outside)
+
+camera2 = Camera.create(
+    name: 'Logitech C920', address: "/dev/video1", 
     output_width: 1920, output_height: 1080, 
     x: 0, y: 0, is_record_enabled: true, is_enabled: true, 
     camera_brand: c920, 
@@ -113,4 +121,4 @@ dvr1 = Dvr.create(account: 'admin', password: '123456', channel_num: 8)
 dvr2 = Dvr.create(account: 'admin', password: '123456', channel_num: 8)
           .create_server(name: 'MIS DVR-2', address: '192.168.0.110', port: 80, location_area: mis_5f_outside)
 
-dvr1.cameras = [camera]
+dvr1.cameras = [camera1, camera2]

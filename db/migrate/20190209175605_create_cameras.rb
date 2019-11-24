@@ -1,7 +1,7 @@
 class CreateCameras < ActiveRecord::Migration[5.2]
   def change
     create_table :cameras do |t|
-      t.string :camera
+      t.string :name
       t.string :address
       t.integer :output_width
       t.integer :output_height
