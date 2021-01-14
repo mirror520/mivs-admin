@@ -27,7 +27,7 @@ gem 'rack-cors', require: 'rack/cors'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Redis Admin for managing data
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 # Use Devise for authentication
 gem 'devise'
 # Use CanCanCan for authorization
